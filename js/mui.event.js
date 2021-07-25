@@ -3,7 +3,7 @@
  * @param {Object} $
  */
 (function($) {
-	if ('ontouchstart' in window) {
+	if ('ontouchstart' in window || /mobile/i.test(window.navigator.userAgent)) {
 		$.isTouchable = true;
 		$.EVENT_START = 'touchstart';
 		$.EVENT_MOVE = 'touchmove';
